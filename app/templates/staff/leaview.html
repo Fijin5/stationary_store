@@ -1,0 +1,30 @@
+{% extends 'staff/shome.html' %}
+{% block content %}
+<body style="background-image:url(static/images/j1.webp); background-size:cover">
+    <div class="row">
+        <div class="col-lg-3 col-md-3"></div>
+        <div class="col-lg-6 col-md-6">
+            <U><h1 style="text-align: center;color: blueviolet;">Leave Status</h1><br></U>
+            <table class="table table-bordered table-hover table-danger" width="100%" style="text-align: center;">
+                <tr>
+                    <th>from Date</th>
+                    <th>To Date</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                </tr>
+                {% for i in b %}
+                <tr>
+                    <td>{{i.3}}</td>
+                    <td>{{i.4}}</td>
+                    <td>{{i.6}}</td>
+                    <td>{{i.7}}</td>
+
+                    
+                </tr>
+                {% endfor %}
+                </table>
+          </div>
+          <div class="col-lg-3 col-md-3"></div>
+    </div>
+    </body>
+{% endblock %}
